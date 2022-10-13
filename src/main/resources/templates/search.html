@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyszukaj</title>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{styles/main.css}">
+
+</head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+
+<main class="form">
+    <form action="/search-group" method="post">
+        <div>
+            <label style="text-align: center">Wybierz grupę
+            </label>
+            <select name="group">
+                <option th:each="gr: ${group}" th:text="${gr.groupName}" th:name="group" th:value="${gr}">A</option>
+            </select>
+        </div>
+        <button type="submit">Wyszukaj</button>
+    </form>
+</main>
+
+</body>
+</html>

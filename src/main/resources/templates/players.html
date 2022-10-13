@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Zawodnicy</title>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{styles/main.css}">
+</head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+
+<main class="table-main">
+    <table>
+        <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Lepsza noga</th>
+                <th>Grupa</th>
+            </tr>
+        </thead>
+        <tbody th:each="group: ${playerGroups}" th:object="${group}">
+            <tr th:each="player, status: *{players}">
+                <td th:text="${player.firstName}">Jan</td>
+                <td th:text="${player.lastName}">Kowalski</td>
+                <td th:text="${player.preferredFoot.foot}">PRAWA</td>
+                <td th:text="*{groupName.groupName}">A</td>
+            </tr>
+        </tbody>
+
+    </table>
+</main>
+
+</body>
+</html>

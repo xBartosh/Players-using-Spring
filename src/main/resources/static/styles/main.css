@@ -1,0 +1,89 @@
+html{
+    height: 100vh;
+    background-image: linear-gradient(to top left, darkslategrey, darkblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body{
+    margin: auto;
+    text-align: center;
+    max-width: 900px;
+    font-family: Arial, "Roboto Light", monospace;
+}
+
+h1{
+    color: white;
+    margin-bottom: 50px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+img {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.choice {
+    width: 30%;
+    background-color: ghostwhite;
+    line-height: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px;
+}
+
+.choice:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: ghostwhite;
+    margin: 5% 15%;
+    border-radius: 20px;
+}
+
+form, form > div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form > div {
+    margin-bottom: 10px;
+    gap: 3px;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+.table-main {
+    margin: auto;
+    width: 70%;
+    height: auto;
+    background-color: ghostwhite;
+    border-radius: 20px;
+}
+
+button {
+    margin-top: 10px;
+}

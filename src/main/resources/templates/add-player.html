@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj zawodnika</title>
+    <link rel="stylesheet" href="../static/styles/main.css" th:href="@{styles/main.css}">
+</head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+
+<main class="form">
+    <h2>Dodaj zawodnika</h2>
+    <form action="/zapisz" method="post">
+        <div>
+            <label for="firstName">Imię</label>
+            <input name="firstName" id="firstName" required>
+        </div>
+        <div>
+            <label for="lastName">Nazwisko</label>
+            <input name="lastName" id="lastName" required>
+        </div>
+        <div>
+            <label for="foot">Lepsza noga</label>
+            <select name="preferredFoot" id="foot" required>
+                <option th:each="ft: ${foot}" th:text="${ft.foot}" th:name="preferredFoot" name="right" th:value="${ft}">Prawa</option>
+            </select>
+        </div>
+        <div>
+            <label for="group">Grupa</label>
+            <select name="group" id="group" th:remove="all-but-first" required>
+                <option th:each="gr: ${group}" th:text="${gr.groupName}" th:name="group" th:value="${gr.groupName}">A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+        </div>
+        <button type="submit">Dodaj</button>
+    </form>
+</main>
+</body>
+</html>

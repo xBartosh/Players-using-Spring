@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="../static/styles/main.css" th:href="@{styles/main.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>Beniaminek - zawodnicy</title>
+</head>
+<body>
+
+<header th:replace="fragments :: header"></header>
+
+<main>
+    <a class="choice" href="/dodaj" th:href="@{/dodaj}">Dodaj zawodnika</a>
+    <a class="choice" href="/zawodnicy" th:href="@{/zawodnicy}">Wyświetl zawodników</a>
+    <a class="choice" href="/wyszukaj" th:href="@{/wyszukaj}">Wyszukaj zawodników</a>
+</main>
+
+</body>
+</html>
